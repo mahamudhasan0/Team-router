@@ -1,0 +1,66 @@
+.singleitem {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.singleitem .thumbImg {
+  width: 100%;
+  height: 350px;
+  opacity: 0.6;
+}
+.singleitem .badgeImg {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 100px;
+}
+.singleitem .lorem {
+  width: 85%;
+  height: 100%;
+  color: white;
+}
+.banner_info {
+  background-color: plum;
+  width: 85%;
+  height: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info {
+  padding: 10px;
+}
+.banner_paragraph {
+  color: white;
+  text-transform: capitalize;
+  color: black;
+}
+.groupimg {
+  width: 45%;
+  height: 50%;
+  border-radius: 10px;
+}
+a:nth-child(1) {
+  color: lightblue;
+  font-size: 35px;
+  margin: 8px;
+}
+a:nth-child(2) {
+  color: lightskyblue;
+  font-size: 35px;
+  margin: 8px;
+}
+a:nth-child(3) {
+  color: lightcoral;
+  font-size: 35px;
+  margin: 8px;
+}

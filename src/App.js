@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Team from "./components/Team/Team";
+import "./App.css";
+import SingleTeam from "./components/TeamDetails/TeamDetails";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
+  const value = JSON.parse(localStorage.getItem("team")) || "";
+  const [teamName] = useState(value);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Team} />
+          <Route
+            exact
+            path={
+              teamName
+                ? `/singleTeam/${teamName.team.strTeam}`
+                : `/singleTeam/${teamName.team.strTeam}`
+            }
+            component={SingleTeam}
+          />
+        </Switch>
+      </Router>
     </div>
   );
 }
-
 export default App;
